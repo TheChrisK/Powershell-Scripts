@@ -140,9 +140,10 @@ foreach ($group in $groupsToAdd) {
 }
 
 # Summary
-Write-Host "`n" + "="*50 -ForegroundColor Green
+Write-Host "`n" -NoNewline
+Write-Host ("="*60) -ForegroundColor Green
 Write-Host "GROUP MEMBERSHIP SYNC SUMMARY" -ForegroundColor Green
-Write-Host "="*50 -ForegroundColor Green
+Write-Host ("="*60) -ForegroundColor Green
 Write-Host "Source User: $($sourceUserObj.UserPrincipalName)" -ForegroundColor White
 Write-Host "Target User: $($targetUserObj.UserPrincipalName)" -ForegroundColor White
 Write-Host "Source Groups Found: $($sourceGroups.Count)" -ForegroundColor White
