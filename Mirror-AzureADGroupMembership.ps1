@@ -140,10 +140,14 @@ foreach ($group in $groupsToAdd) {
 }
 
 # Summary
+$title = "GROUP MEMBERSHIP SYNC SUMMARY"
+$totalWidth = 60
+$padding = [math]::Floor(($totalWidth - $title.Length) / 2)
+
 Write-Host "`n" -NoNewline
-Write-Host ("="*60) -ForegroundColor Green
-Write-Host "GROUP MEMBERSHIP SYNC SUMMARY" -ForegroundColor Green
-Write-Host ("="*60) -ForegroundColor Green
+Write-Host ("=" * $totalWidth) -ForegroundColor Green
+Write-Host (" " * $padding + $title) -ForegroundColor Green
+Write-Host ("=" * $totalWidth) -ForegroundColor Green
 Write-Host "Source User: $($sourceUserObj.UserPrincipalName)" -ForegroundColor White
 Write-Host "Target User: $($targetUserObj.UserPrincipalName)" -ForegroundColor White
 Write-Host "Source Groups Found: $($sourceGroups.Count)" -ForegroundColor White
